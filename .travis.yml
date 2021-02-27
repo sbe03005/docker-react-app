@@ -12,6 +12,9 @@ before_install:
 script:
   - docker run -e CI=true sbe03005/docker-react-app npm run test -- --coverage
 
+after_success:
+  - docker build -t sbe03005/docker-react-app .
+
 deploy:
   provider: elasticbeanstalk
   region: "ap-northeast-2"
