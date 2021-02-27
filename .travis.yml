@@ -3,7 +3,7 @@ sudo: required
 language: generic
 
 services:
-  - dockerfile
+  - docker
 
 before_install:
   - echo "start creating an image with dockerfile"
